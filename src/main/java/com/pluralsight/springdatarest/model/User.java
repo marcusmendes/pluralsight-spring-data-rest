@@ -1,5 +1,6 @@
 package com.pluralsight.springdatarest.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -27,6 +28,7 @@ public class User {
 
     @Getter
     @Setter
+    @JsonIgnore // Disable this field from being exposed in the API
     private boolean isRegistered;
 
     @Getter

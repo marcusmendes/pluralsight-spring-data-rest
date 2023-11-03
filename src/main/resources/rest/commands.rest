@@ -9,7 +9,7 @@ PATCH http://localhost:8081/users/1
 Content-Type: application/json
 
 {
-    "name": "Amelia Jones"
+    "name": "Amelia Jones",
     "isRegistered": "true"
 }
 
