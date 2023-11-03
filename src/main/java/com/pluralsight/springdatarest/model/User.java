@@ -1,9 +1,11 @@
 package com.pluralsight.springdatarest.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Version;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -34,6 +36,11 @@ public class User {
     @Getter
     @Setter
     private boolean isCitizen;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @Getter
+    @Setter
+    private Address address;
 
     protected User() {}
 
